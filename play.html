@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>视频播放</title>
+		<link type="text/css" href="/static/home/font/iconfont.css" rel="stylesheet">
+		<link type="text/css" href="/static/home/css/play.css" rel="stylesheet">
+		<link type="text/css" href="/static/home/lib/layui/css/layui.css" rel="stylesheet">
+		<link type="text/css" href="/static/home/lib/PingFangSC-Regular.ttf" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/static/home/lib/swiper.min.css">
+		<meta http-equiv="X-UA-Compatible" content="IE=8">
+        <meta http-equiv="Expires" content="0">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-control" content="no-cache">
+        <meta http-equiv="Cache" content="no-cache">
+		<script src="/static/home/lib/jquery/jquery.js"></script>
+
+		<style>
+			.down_botton {
+				width: 24px;
+				font-size: 14px;
+				margin-right: 15px !important;
+			}
+
+			#boxs1 {
+				overflow: hidden;
+				overflow: auto !important;
+				overflow-y: scroll;
+			}
+
+			#boxs1::-webkit-scrollbar {
+				width: 4px;
+				background-color: #eee;
+			}
+
+			#boxs1::-webkit-scrollbar-thumb {
+				background-color: #909199;
+				border-radius: 4px;
+			}
+			.xuans-right{
+				display:flex;
+				align-items: center;
+				justify-content: flex-end;
+			}
+			.study-center1{
+				display:flex;
+				align-items: center;
+				margin-right: 20px;
+				color:#fff;
+				cursor: pointer;
+			}
+			.study-center1 img{
+				width: 16px;
+				height: 16px;
+				margin-right: 10px;
+			}
+			.study-center1 p:hover{
+				color:#fff !important;
+				
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="video-title">
+			<div class="xuans">
+				<div class="xuan">
+					<!-- <i class="iconfont icon-iconfubenkaobei"></i> -->
+					<input type="hidden" id="class_id" value="1734" />
+					<input type="hidden" id="courseware_id" value="b7d9d66dd1ebb02aa01b765fb3251f8b" />
+					<h4>《中级职称》2025 中级总复习《经济法》 （王雅萱）</h4>
+				</div>
+				<div class="xuans-right">
+					<a href="https://www.aierxin.cn/Personalcenter/index.html" class="study-center1">
+						<img src="/static/home/img/xx.png" />
+						<p>学习中心</p>
+					</a>
+					<div class="user">
+						<img 							src="/static/public/img/mrtx.png"  />
+						<p class="user-name"></p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="content">
+			<div class="videos">
+				<div class="see-course">
+					<div class="video">
+						<div id="video" alt="video"></div>
+						<div class="operation-list" style="display: none;">
+							<div class="oper share1">
+								<div class="share">
+									<div class="shares">
+										<div class="share-text">
+											<h4>随时随地 想看就看</h4>
+											<p>扫一扫下载APP</p>
+											<p><i class="iconfont icon-gengduotianchong"></i></p>
+										</div>
+										<img class="codes" src="/static/home/img/code.png">
+									</div>
+									<div class="share-bottom">
+										<span>预约提醒</span>
+										<span>直播互动</span>
+										<span>随时学习</span>
+										<span>课后刷题</span>
+									</div>
+								</div>
+								<p class="kan"><i class="iconfont icon-phone"></i>用手机看</p>
+							</div>
+							<div class="oper shoucang">
+								<p class="shoucang1"><i class="iconfont icon-xin1"></i>收藏课程</p>
+							</div>
+							<div class="oper zixun">
+								<p class="zixun1"><i class="iconfont icon-zixun"></i>咨询课程</p>
+							</div>
+						</div>
+					</div>
+					<div class="menus">
+						<div id="boxs">
+							<div class="tab1-list " id="tab1">
+								<div class="showMenu">
+									<i class="iconfont icon-shouqi"></i>
+									<p>收起</p>
+								</div>
+								<div class="tab1 act1">
+									<i class="iconfont icon-yincangmulu"></i>
+									<p>目录</p>
+								</div>
+								<div class="tab1">
+									<i class="iconfont icon-fankui"></i>
+									<p>笔记</p>
+								</div>
+								<div class="tab1">
+									<i class="iconfont icon-changjianwenti"></i>
+									<p>答疑</p>
+								</div>
+								<!-- <div class="tab1 down">
+									<i class="iconfont icon-xiazai1"></i>
+									<p>讲义</p>
+								</div> -->
+								<div class="kefu" onclick="openService()">
+									<i class="iconfont icon-kefu"></i>
+									<p>联系客服</p>
+								</div>
+							</div>
+							<div id="boxs1">
+								<div class="box1 show1">
+									<h4 class="jiang-num">共9讲,更新完成</h4>
+																		<div class="list">
+										<ul class="parent">
+																						<li>
+												<div 													class="list1-title up" >
+													<p></p>
+													<i class="iconfont icon-icon-downfill"></i>
+												</div>
+												<ul class="children">
+																										<li class="play">
+														<a style="color: #fff;overflow: hidden"
+														   href="https://www.aierxin.cn/personalcenter/play.html?class_id=1734&courseware_id=3190988e3b3a21d039637b3f0e6d7cb5&chapter_id=1734">
+															第九讲：总复习 第六章 考点十一至十八														</a>
+																											</li>
+																										<li class="play">
+														<a style="color: #fff;overflow: hidden"
+														   href="https://www.aierxin.cn/personalcenter/play.html?class_id=1734&courseware_id=b7d9d66dd1ebb02aa01b765fb3251f8b&chapter_id=1734">
+															<!--															<i class="iconfont icon-zhibo"></i>-->
+															<img src="/static/live/images/audio.svg" style="width: 15px;height: 15px;" />
+															第八讲：总复习 第六章 考点一至十														</a>
+																											</li>
+																										<li class="play">
+														<a style="color: #fff;overflow: hidden"
+														   href="https://www.aierxin.cn/personalcenter/play.html?class_id=1734&courseware_id=a75dd132d1e9207534dd041f8646fd66&chapter_id=1734">
+															第七讲：总复习 第五章 考点一至十二														</a>
+																											</li>
+																										<li class="play">
+														<a style="color: #fff;overflow: hidden"
+														   href="https://www.aierxin.cn/personalcenter/play.html?class_id=1734&courseware_id=dd96b42ed2bd5cfe943a52ceeef1ff7a&chapter_id=1734">
+															第六讲：总复习 第四章 考点一至八														</a>
+																											</li>
+																										<li class="play">
+														<a style="color: #fff;overflow: hidden"
+														   href="https://www.aierxin.cn/personalcenter/play.html?class_id=1734&courseware_id=2a5f67a7499ee0a70c5d9974924c9804&chapter_id=1734">
+															第五讲：总复习 第三章 考点一至五														</a>
+																											</li>
+																										<li class="play">
+														<a style="color: #fff;overflow: hidden"
+														   href="https://www.aierxin.cn/personalcenter/play.html?class_id=1734&courseware_id=a0f4e2448b839bd406f2ac731c4003e7&chapter_id=1734">
+															第四讲：总复习 第二章 考点十一至十八														</a>
+																											</li>
+																										<li class="play">
+														<a style="color: #fff;overflow: hidden"
+														   href="https://www.aierxin.cn/personalcenter/play.html?class_id=1734&courseware_id=62dcaecf2776c109dd7ca987640605d1&chapter_id=1734">
+															第三讲：总复习 第二章 考点一至十														</a>
+																											</li>
+																										<li class="play">
+														<a style="color: #fff;overflow: hidden"
+														   href="https://www.aierxin.cn/personalcenter/play.html?class_id=1734&courseware_id=c7d0cec025d0d3d78279e85c24ad0c6c&chapter_id=1734">
+															第二讲：总复习 第一章 考点十至十二														</a>
+																											</li>
+																										<li class="play">
+														<a style="color: #fff;overflow: hidden"
+														   href="https://www.aierxin.cn/personalcenter/play.html?class_id=1734&courseware_id=22d4a9c0bcccd197eac980a824dc392e&chapter_id=1734">
+															第一讲：总复习 第一章 考点一至九														</a>
+																											</li>
+																										</a>
+												</ul>
+											</li>
+																					</ul>
+									</div>
+																	</div>
+								<div class="box1">
+									<div class="dayi-box jieda">
+										<h4 class="biji-title">我的笔记</h4>
+										<textarea placeholder="本节课听懂了吗？请写出您对本节课存在的疑问，我们会尽快为您解决" id="content"></textarea>
+										<button class="submit" onclick="subNote()" type="submit">保存笔记</button>
+										<a href="https://www.aierxin.cn/membernote/index.html" target="_blank"
+											class="see-biji">查看我记录的全部笔记内容</a>
+									</div>
+								</div>
+								<div class="box1">
+									<div class="dayi-list">
+										暂无记录									</div>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	<div id="think_page_trace" style="position: fixed;bottom:0;right:0;font-size:14px;width:100%;z-index: 999999;color: #000;text-align:left;font-family:'微软雅黑';">
+    <div id="think_page_trace_tab" style="display: none;background:white;margin:0;height: 250px;">
+        <div id="think_page_trace_tab_tit" style="height:30px;padding: 6px 12px 0;border-bottom:1px solid #ececec;border-top:1px solid #ececec;font-size:16px">
+                        <span style="color:#000;padding-right:12px;height:30px;line-height:30px;display:inline-block;margin-right:3px;cursor:pointer;font-weight:700">基本</span>
+                        <span style="color:#000;padding-right:12px;height:30px;line-height:30px;display:inline-block;margin-right:3px;cursor:pointer;font-weight:700">文件</span>
+                        <span style="color:#000;padding-right:12px;height:30px;line-height:30px;display:inline-block;margin-right:3px;cursor:pointer;font-weight:700">流程</span>
+                        <span style="color:#000;padding-right:12px;height:30px;line-height:30px;display:inline-block;margin-right:3px;cursor:pointer;font-weight:700">错误</span>
+                        <span style="color:#000;padding-right:12px;height:30px;line-height:30px;display:inline-block;margin-right:3px;cursor:pointer;font-weight:700">SQL</span>
+                        <span style="color:#000;padding-right:12px;height:30px;line-height:30px;display:inline-block;margin-right:3px;cursor:pointer;font-weight:700">调试</span>
+                    </div>
+        <div id="think_page_trace_tab_cont" style="overflow:auto;height:212px;padding:0;line-height: 24px">
+                        <div style="display:none;">
+                <ol style="padding: 0; margin:0">
+                    <li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">请求信息 : 2025-08-27 19:42:01 HTTP/2.0 GET : https://www.aierxin.cn/personalcenter/play.html?class_id=1734&amp;courseware_id=b7d9d66dd1ebb02aa01b765fb3251f8b&amp;chapter_id=1734</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">运行时间 : 0.106457s [ 吞吐率：9.39req/s ] 内存消耗：4,455.14kb 文件加载：174</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">查询信息 : 18 queries</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">缓存信息 : 0 reads,0 writes</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">会话信息 : SESSION_ID=74f62d8798fcf01ee3a7c39713e77a9b</li>                </ol>
+            </div>
+                        <div style="display:none;">
+                <ol style="padding: 0; margin:0">
+                    <li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/public/index.php ( 1.80 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/autoload.php ( 0.75 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/composer/autoload_real.php ( 1.63 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/composer/platform_check.php ( 0.90 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/composer/ClassLoader.php ( 15.99 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/composer/autoload_static.php ( 21.54 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/symfony/polyfill-php80/bootstrap.php ( 1.54 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/symfony/polyfill-mbstring/bootstrap.php ( 7.21 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/symfony/polyfill-php72/bootstrap.php ( 1.94 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/symfony/polyfill-intl-normalizer/bootstrap.php ( 0.73 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/symfony/polyfill-intl-idn/bootstrap.php ( 4.66 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-helper/src/helper.php ( 7.62 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/ralouphie/getallheaders/src/getallheaders.php ( 1.65 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/guzzlehttp/psr7/src/functions_include.php ( 0.16 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/guzzlehttp/psr7/src/functions.php ( 13.51 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/guzzlehttp/promises/src/functions_include.php ( 0.17 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/guzzlehttp/promises/src/functions.php ( 10.25 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/guzzlehttp/guzzle/src/functions_include.php ( 0.16 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/guzzlehttp/guzzle/src/functions.php ( 10.02 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/stubs/load_stubs.php ( 0.17 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Exception.php ( 1.75 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Facade.php ( 2.80 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/symfony/polyfill-ctype/bootstrap.php ( 1.61 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/symfony/polyfill-php73/bootstrap.php ( 1.02 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/khanamiryan/qrcode-detector-decoder/lib/Common/customFunctions.php ( 2.08 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/myclabs/deep-copy/src/DeepCopy/deep_copy.php ( 0.39 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/mpdf/mpdf/src/functions.php ( 0.51 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/overtrue/wechat/src/Kernel/Support/Helpers.php ( 2.75 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/overtrue/wechat/src/Kernel/Helpers.php ( 1.94 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/symfony/var-dumper/Resources/functions/dump.php ( 0.83 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-captcha/src/helper.php ( 1.37 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-queue/src/common.php ( 1.01 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/App.php ( 15.39 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Container.php ( 15.51 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/psr/container/src/ContainerInterface.php ( 1.11 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/app/provider.php ( 0.20 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Http.php ( 6.40 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-helper/src/helper/Str.php ( 7.51 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Env.php ( 4.32 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/app/common.php ( 22.35 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/helper.php ( 19.01 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Config.php ( 5.23 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/apidoc.php ( 1.74 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/apidoc_bal.php ( 1.47 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/app.php ( 5.31 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/facade/Env.php ( 1.72 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/cache.php ( 0.97 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/captcha.php ( 1.02 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/console.php ( 0.24 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/cookie.php ( 0.58 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/database.php ( 6.84 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/dify.php ( 0.15 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/filesystem.php ( 0.66 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/gateway_worker.php ( 1.95 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/jump.php ( 0.36 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/lang.php ( 0.84 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/log.php ( 1.41 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/middleware.php ( 0.20 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/queue.php ( 1.31 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/route.php ( 1.59 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/session.php ( 0.57 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/trace.php ( 0.35 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/view.php ( 0.84 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/worker.php ( 1.58 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/worker_server.php ( 1.63 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/config/zsbPath.php ( 0.88 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/app/event.php ( 0.27 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Event.php ( 6.91 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/app/service.php ( 0.14 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/app/AppService.php ( 0.28 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Service.php ( 1.67 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Lang.php ( 8.58 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/initializer/Error.php ( 3.31 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/initializer/RegisterService.php ( 1.38 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/services.php ( 0.31 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/service/PaginatorService.php ( 1.57 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/service/ValidateService.php ( 1.02 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/service/ModelService.php ( 1.56 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/hg/apidoc/src/Service.php ( 1.20 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-captcha/src/CaptchaService.php ( 0.52 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-multi-app/src/Service.php ( 1.08 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-queue/src/queue/Service.php ( 1.24 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-trace/src/Service.php ( 0.79 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Middleware.php ( 7.03 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-worker/src/Service.php ( 0.96 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Console.php ( 23.40 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/initializer/BootService.php ( 0.80 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/Paginator.php ( 12.10 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Validate.php ( 47.75 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/Model.php ( 26.16 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/model/concern/Attribute.php ( 18.08 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/model/concern/RelationShip.php ( 26.88 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/model/concern/ModelEvent.php ( 2.35 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/model/concern/TimeStamp.php ( 5.92 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/model/concern/Conversion.php ( 9.92 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-helper/src/contract/Arrayable.php ( 0.10 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-helper/src/contract/Jsonable.php ( 0.14 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Db.php ( 2.99 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/DbManager.php ( 8.68 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Log.php ( 8.83 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Manager.php ( 4.16 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/psr/log/Psr/Log/LoggerInterface.php ( 3.16 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Cache.php ( 4.99 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/psr/simple-cache/src/CacheInterface.php ( 4.61 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-helper/src/helper/Arr.php ( 16.16 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/cache/driver/File.php ( 7.70 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/cache/Driver.php ( 8.35 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/contract/CacheHandlerInterface.php ( 2.34 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/app/Request.php ( 0.09 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Request.php ( 55.78 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/app/middleware.php ( 0.31 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Pipeline.php ( 2.71 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-trace/src/TraceDebug.php ( 3.05 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/middleware/SessionInit.php ( 2.10 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Session.php ( 1.80 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/session/driver/File.php ( 6.52 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/contract/SessionHandlerInterface.php ( 0.89 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/session/Store.php ( 7.59 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/middleware/AllowCrossDomain.php ( 2.14 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-multi-app/src/MultiApp.php ( 7.63 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Route.php ( 24.36 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/route/RuleName.php ( 5.51 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/route/Domain.php ( 5.59 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/route/RuleGroup.php ( 14.42 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/route/Rule.php ( 23.40 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/facade/Config.php ( 1.41 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/facade/Route.php ( 4.84 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/route/RuleItem.php ( 9.54 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/route/dispatch/Url.php ( 3.54 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/route/dispatch/Controller.php ( 6.50 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/route/Dispatch.php ( 6.83 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/app/home/controller/Personalcenter.php ( 10.93 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/app/home/controller/Base.php ( 1.48 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/app/common/model/SiteConfigModel.php ( 0.36 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/connector/Mysql.php ( 4.55 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/PDOConnection.php ( 52.48 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/Connection.php ( 8.01 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/ConnectionInterface.php ( 4.75 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/builder/Mysql.php ( 14.63 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/Builder.php ( 40.79 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/Query.php ( 11.10 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/BaseQuery.php ( 36.24 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/concern/TimeFieldQuery.php ( 7.71 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/concern/AggregateQuery.php ( 2.93 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/concern/ModelRelationQuery.php ( 17.04 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/concern/ResultOperation.php ( 6.51 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/concern/Transaction.php ( 2.97 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/concern/WhereQuery.php ( 16.77 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/concern/JoinAndViewQuery.php ( 7.11 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/concern/ParamsBind.php ( 2.85 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/db/concern/TableFieldInfo.php ( 2.61 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/log/driver/File.php ( 6.24 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/contract/LogHandlerInterface.php ( 0.89 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/log/Channel.php ( 6.82 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/event/LogRecord.php ( 0.89 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/event/LogWrite.php ( 0.92 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/facade/Session.php ( 1.18 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-orm/src/facade/Db.php ( 0.97 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/app/home/controller/Config.php ( 0.42 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-helper/src/Collection.php ( 16.74 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/facade/View.php ( 1.75 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/View.php ( 4.60 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/app/home/model/ClassModel.php ( 16.52 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/app/home/model/Courseware.php ( 6.53 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Response.php ( 8.94 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/response/View.php ( 3.41 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/Cookie.php ( 6.37 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-view/src/Think.php ( 8.67 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-template/src/Template.php ( 48.12 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-template/src/template/driver/File.php ( 2.42 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/runtime/home/temp/a0588f2b06cf754b3a281d9a1d4aca3a.php ( 21.26 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-multi-app/src/Url.php ( 7.83 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/framework/src/think/route/Url.php ( 15.16 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/data/aierxin/app.aierxin.cn/api2/vendor/topthink/think-trace/src/Html.php ( 4.49 KB )</li>                </ol>
+            </div>
+                        <div style="display:none;">
+                <ol style="padding: 0; margin:0">
+                                    </ol>
+            </div>
+                        <div style="display:none;">
+                <ol style="padding: 0; margin:0">
+                                    </ol>
+            </div>
+                        <div style="display:none;">
+                <ol style="padding: 0; margin:0">
+                    <li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">CONNECT:[ UseTime:0.000952s ] mysql:host=192.168.10.200;port=3306;dbname=aierxin_wx;charset=utf8</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SHOW FULL COLUMNS FROM `aex_site_config` [ RunTime:0.001163s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SELECT * FROM `aex_site_config` WHERE  `bid` = 1  AND `close` = 0 LIMIT 1 [ RunTime:0.000774s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SHOW FULL COLUMNS FROM `aex_members` [ RunTime:0.001347s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SELECT * FROM `aex_members` WHERE  `id` = 'f7b3b083e03beaad4f7e2b6d35687069' LIMIT 1 [ RunTime:0.000992s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SHOW FULL COLUMNS FROM `aex_config` [ RunTime:0.001051s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SELECT * FROM `aex_config` ORDER BY `id` ASC [ RunTime:0.000731s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SHOW FULL COLUMNS FROM `aex_class` [ RunTime:0.001325s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SELECT * FROM `aex_class` WHERE  `id` = 1734 LIMIT 1 [ RunTime:0.000876s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SHOW FULL COLUMNS FROM `aex_teacher` [ RunTime:0.001096s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SELECT `name` FROM `aex_teacher` WHERE  `id` = 164 LIMIT 1 [ RunTime:0.000598s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SHOW FULL COLUMNS FROM `aex_class_category` [ RunTime:0.001131s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SELECT `name` FROM `aex_class_category` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.000603s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SHOW FULL COLUMNS FROM `aex_courseware` [ RunTime:0.001126s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SELECT * FROM `aex_courseware` WHERE  `class_id` = 1734 ORDER BY `sort` DESC [ RunTime:0.000943s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SELECT COUNT(*) AS think_count FROM `aex_courseware` WHERE  `class_id` = 1734  AND `status` = 1 LIMIT 1 [ RunTime:0.000755s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SELECT `ccid` FROM `aex_courseware` WHERE  `id` = 'b7d9d66dd1ebb02aa01b765fb3251f8b' LIMIT 1 [ RunTime:0.000589s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SHOW FULL COLUMNS FROM `aex_member_comment` [ RunTime:0.000954s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">SELECT * FROM `aex_member_comment` WHERE  `class_id` = '1734'  AND `audit_status` = 1  AND `type` = 2 [ RunTime:0.020144s ]</li>                </ol>
+            </div>
+                        <div style="display:none;">
+                <ol style="padding: 0; margin:0">
+                                    </ol>
+            </div>
+                    </div>
+    </div>
+    <div id="think_page_trace_close" style="display:none;text-align:right;height:15px;position:absolute;top:10px;right:12px;cursor:pointer;"><img style="vertical-align:top;" src="data:image/gif;base64,R0lGODlhDwAPAJEAAAAAAAMDA////wAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MUQxMjc1MUJCQUJDMTFFMTk0OUVGRjc3QzU4RURFNkEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MUQxMjc1MUNCQUJDMTFFMTk0OUVGRjc3QzU4RURFNkEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxRDEyNzUxOUJBQkMxMUUxOTQ5RUZGNzdDNThFREU2QSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxRDEyNzUxQUJBQkMxMUUxOTQ5RUZGNzdDNThFREU2QSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAAAAAAALAAAAAAPAA8AAAIdjI6JZqotoJPR1fnsgRR3C2jZl3Ai9aWZZooV+RQAOw==" /></div>
+</div>
+<div id="think_page_trace_open" style="height:30px;float:right;text-align:right;overflow:hidden;position:fixed;bottom:0;right:0;color:#000;line-height:30px;cursor:pointer;">
+    <div style="background:#232323;color:#FFF;padding:0 6px;float:right;line-height:30px;font-size:14px">0.107690s </div>
+    <img width="30" style="" title="ShowPageTrace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjVERDVENkZGQjkyNDExRTE5REY3RDQ5RTQ2RTRDQUJCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVERDVENzAwQjkyNDExRTE5REY3RDQ5RTQ2RTRDQUJCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NURENUQ2RkRCOTI0MTFFMTlERjdENDlFNDZFNENBQkIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NURENUQ2RkVCOTI0MTFFMTlERjdENDlFNDZFNENBQkIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5fx6IRAAAMCElEQVR42sxae3BU1Rk/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">
+</div>
+
+<script type="text/javascript">
+    (function(){
+        var tab_tit  = document.getElementById('think_page_trace_tab_tit').getElementsByTagName('span');
+        var tab_cont = document.getElementById('think_page_trace_tab_cont').getElementsByTagName('div');
+        var open     = document.getElementById('think_page_trace_open');
+        var close    = document.getElementById('think_page_trace_close').children[0];
+        var trace    = document.getElementById('think_page_trace_tab');
+        var cookie   = document.cookie.match(/thinkphp_show_page_trace=(\d\|\d)/);
+        var history  = (cookie && typeof cookie[1] != 'undefined' && cookie[1].split('|')) || [0,0];
+        open.onclick = function(){
+            trace.style.display = 'block';
+            this.style.display = 'none';
+            close.parentNode.style.display = 'block';
+            history[0] = 1;
+            document.cookie = 'thinkphp_show_page_trace='+history.join('|')
+        }
+        close.onclick = function(){
+            trace.style.display = 'none';
+            this.parentNode.style.display = 'none';
+            open.style.display = 'block';
+            history[0] = 0;
+            document.cookie = 'thinkphp_show_page_trace='+history.join('|')
+        }
+        for(var i = 0; i < tab_tit.length; i++){
+            tab_tit[i].onclick = (function(i){
+                return function(){
+                    for(var j = 0; j < tab_cont.length; j++){
+                        tab_cont[j].style.display = 'none';
+                        tab_tit[j].style.color = '#999';
+                    }
+                    tab_cont[i].style.display = 'block';
+                    tab_tit[i].style.color = '#000';
+                    history[1] = i;
+                    document.cookie = 'thinkphp_show_page_trace='+history.join('|')
+                }
+            })(i)
+        }
+        parseInt(history[0]) && open.click();
+        tab_tit[history[1]].click();
+    })();
+</script>
+</body>
+	<script src="/static/home/js/jquery-1.8.3.min.js"></script>
+	<script src="/static/home/js/tabs.js"></script>
+	<script src="/static/home/js/index.js"></script>
+	<script src="/static/home/lib/layui/layui.js"></script>
+	<script src="/static/home/lib/ckplayer/ckplayer.js"></script>
+	<script type="text/javascript" src="/static/home/lib/swiper.min.js"></script>
+	<script src="/static/home/js/message.js"></script>
+
+	<script type="text/javascript">
+		var list = [
+			"BD5499BC21D1D5CF7E6C9CEE8B422289"
+		];
+		var idx = 0;
+
+		function onCCH5PlayerLoaded() {
+			createPlayer();
+		}
+
+		function nextPlayer() {
+			window.cc_js_Player.destroy();
+			createPlayer();
+		}
+
+		function createPlayer() {
+			if (idx > list.length - 1) {
+				idx = 0;
+			}
+			window.createCCH5Player({
+				'vid': list[idx],
+				'siteid': '606E693D99DE632E',
+				'mediatype': 1,
+				'width': "100%",
+				'height': "100%",
+				'parentNode': document.getElementById('video'),
+				'customerId': 'app_pc_12069879271',
+				'autoStart': 'true',
+			});
+			idx = idx + 1;
+		}
+
+		/* 回调样例_监听音量改变*/
+		function on_player_volumechange(volume, vid) {
+
+		}
+		// 暂停回调
+		function on_CCH5player_pause(volume, vid) {
+			clearInterval(Interval);
+		}
+		// 播放回调
+		function on_CCH5player_play(volume, vid) {
+			Interval = setInterval(loadedMetaDataHandler, 60000);
+		}
+
+		function loadedMetaDataHandler() {
+			var watchTime = window.cc_js_Player.getDuration(); //视频总时长
+			var presenttime = window.cc_js_Player.getPosition(); //当前播放时间
+			if (presenttime < watchTime) {
+				courseware_id ='b7d9d66dd1ebb02aa01b765fb3251f8b';
+				class_id = $('#class_id').val();
+				var url = "https://www.aierxin.cn/personalcenter/recordLearn.html";
+				var data = {
+					courseware_id: courseware_id,
+    				class_id: class_id,
+    				from:'pc',
+    				count:1,
+    				live_type:0
+				};
+				$.post(url, data, function(res) {
+					$.post(url, data, function(e) {
+
+					})
+				})
+			}
+		}
+	</script>
+	
+	<script src="https://p.bokecc.com/player?siteid=606E693D99DE632E&newversion=true" type="text/javascript"></script>
+
+	<script>
+		function reTop() {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 100);
+		}
+	</script>
+	<script type="text/javascript">
+		$(function() {
+		    setInterval(checkStatus,600000);
+        	function  checkStatus(){
+        			$.post('https://www.aierxin.cn/CheckAccount/getAccountStatus.html','',function(res){
+        				if(res.code==false){
+        					message(220,res.message);
+        					setInterval(function() {
+        							window.location.href='https://www.aierxin.cn/login/index.html';	
+        					},600000);
+        				}
+        			})
+		     }
+		    
+		    
+		    
+		    
+		    
+			let videoWidth = $(window).width() - 480;
+			let videoheight = $(window).height() - 60;
+			$("body").width($(window).width());
+			$(".video").width(videoWidth);
+			$(".videos").height(videoheight);
+			$(".videos").height(videoheight);
+			$(".video").height(videoheight);
+			$("video").width(videoWidth);
+			$("video").height(videoheight);
+			$("#boxs1").height(videoheight);
+			$(".shaixuan p").click(function() {
+				$(this).addClass("dian");
+			});
+			$(".down").click(function() {
+				$("#boxs .box").eq(0).addClass("show").siblings().removeClass("show");
+				$(".tab1-list .tab1").eq(0).addClass("act1").siblings().removeClass("act1");
+			});
+			$(".submit").click(function() {
+				$("#boxs1 .box1").eq(0).addClass("show1").siblings().removeClass("show1");
+				$("#tab1 .tab1").eq(0).addClass("act1").siblings().removeClass("act1");
+			});
+			$(".submit1").click(function() {
+				$("#boxs2 .box1").eq(0).addClass("show1").siblings().removeClass("show1");
+				$("#tab2 .tab1").eq(0).addClass("act1").siblings().removeClass("act1");
+			});
+			$(".tab-list2 .tab2").off("click").on("click", function() {
+				var index = $(this).index();
+				$(this).addClass("act2").siblings().removeClass("act2");
+				$("#matter-box-list .matter-box").eq(index).addClass("show2").siblings().removeClass("show2");
+			});
+			$(".tab-list .tab").off("click").on("click", function() {
+				var index = $(this).index() + 1;
+				$(this).addClass("act").siblings().removeClass("act");
+				$("#boxs .box").eq(index).addClass("show").siblings().removeClass("show");
+				$(".tab1-list .tab1").eq(0).addClass("act1").siblings().removeClass("act1");
+				$("#boxs1 .box1").eq(0).addClass("show1").siblings().removeClass("show1");
+				$("#boxs2 .box1").eq(0).addClass("show1").siblings().removeClass("show1");
+			});
+			$(".showMenu").click(function() {
+				if ($(this).hasClass("hiden")) {
+					$(this).removeClass("hiden");
+					$(".video").width($(window).width() - 480);
+					$("video").width($(window).width() - 480);
+					$("#boxs1").css('display', 'block');
+					$(".menus").css('width', 480 + 'px');
+					$(".showMenu p").text('收起');
+				} else {
+					$(this).addClass("hiden");
+					$(".video").width($(window).width() - 60);
+					$("video").width($(window).width() - 60);
+					$("#boxs1").css('display', 'none');
+					$(".menus").css('width', 60 + 'px');
+					$(".showMenu p").text('展开');
+				}
+			});
+			$("#tab1 .tab1").off("click").on("click", function() {
+				var index = $(this).index() - 1;
+				$(this).addClass("act1").siblings().removeClass("act1");
+				$("#boxs1 .box1").eq(index).addClass("show1").siblings().removeClass("show1");
+
+			});
+			$(".xuan").toggle(
+				function() {
+					$('.xuan').children("span").removeClass("dian");
+					$(".shaixuan p").removeClass("dian");
+					$('.xuan').children("div").children("i").removeClass("dian");
+					$(this).children("span").addClass("dian");
+					$(this).children("div").children(".icon-shang").addClass("dian");
+					$(this).children("div").children(".icon-arrowup").removeClass("dian");
+				},
+				function() {
+					$('.xuan').children("span").removeClass("dian");
+					$(".shaixuan p").removeClass("dian");
+					$('.xuan').children("div").children("i").removeClass("dian");
+					$(this).children("span").addClass("dian");
+					$(this).children("div").children(".icon-arrowup").addClass("dian");
+					$(this).children("div").children(".icon-shang").removeClass("dian");
+				}
+			);
+			$(".shaixuan p").click(function() {
+				$(this).addClass("dian");
+				$('.xuan').children("span").removeClass("dian");
+				$('.xuan').children("div").children("i").removeClass("dian");
+			});
+			$(".list-title").click(function() {
+				if ($(this).hasClass("up1")) {
+					$(".children").css("display", "none");
+					$(".parent").css("display", "none");
+					$(".list-title").removeClass("up1");
+					$(".list1-title").removeClass("up");
+					$(this).removeClass("up1");
+					$(this).siblings("ul").css("display", "none");
+				} else {
+					$(".children").css("display", "none");
+					$(".parent").css("display", "none");
+					$(".list-title").removeClass("up1");
+					$(".list1-title").removeClass("up");
+					$(this).addClass("up1");
+					$(this).siblings("ul").css("display", "block");
+				}
+			});
+
+			$(".list1-title").click(function() {
+				if ($(this).hasClass("up")) {
+					$(".children").css("display", "none");
+					$(".list1-title").removeClass("up");
+					$(this).removeClass("up");
+					$(this).siblings("ul").css("display", "none");
+				} else {
+					$(".children").css("display", "none");
+					$(".list1-title").removeClass("up");
+					$(this).addClass("up");
+					$(this).siblings("ul").css("display", "block");
+				}
+			});
+			$(".xuans ul").hide();
+			$(".xuans").hover(function() {
+				$(".xuans ul").css("display", "block");
+			}, function() {
+				$(".xuans ul").css("display", "none");
+			});
+			$(".xuans ul").hover(function() {
+				$(".xuans ul").css("display", "block");
+			}, function() {
+				$(".xuans ul").css("display", "none");
+			});
+			$(".xuans ul li").click(function() {
+				var text = $(this).html();
+				$(this).addClass("activ").siblings().removeClass("activ");
+				$(".xuan h4").html(text);
+				$(".xuans ul").css("display", "none");
+			});
+			$(".kan").mouseenter(function() {
+				$(".share").show(200);
+			});
+			$(".kan").mouseleave(function() {
+				$(".share").hide(200);
+			});
+
+			$(".children li").click(function() {
+				$(".children li").removeClass("play");
+				$(this).addClass("play");
+			});
+			$(".parent1 li").click(function() {
+				$(".parent1 li").removeClass("play");
+				$(this).addClass("play");
+			});
+
+			$(".shoucang p").toggle(
+				function() {
+					$(".shoucang p i").removeClass("icon-xin1").addClass("icon-xin");
+					$(".shoucang p").css("color", "#fff");
+					$(".shoucang p i").css("color", "#FF4C30");
+				},
+				function() {
+					$(".shoucang p i").removeClass("icon-xin").addClass("icon-xin1");
+					$(".shoucang p").css("color", "#898789");
+					$(".shoucang p i").css("color", "#898789");
+				}
+			);
+		})
+
+		function play(class_id, courseware_id, chapter_id) {
+			window.location.href = 'https://www.aierxin.cn/personalcenter/play.html?class_id=' + class_id + '&courseware_id=' + courseware_id +
+				'&chapter_id=' + chapter_id;
+		}
+
+		//subNote
+		function subNote() {
+			var class_id = $("#class_id").val();
+			var content = $("#content").val();
+			$.post('https://www.aierxin.cn/membernote/addNote.html', {
+				class_id: class_id,
+				content: content
+			}, function(res) {
+				if (res.status == true) {
+					$("#content").val('');
+				}
+				message(160, res.message);
+			});
+
+		}
+
+		function openService() {
+			window.open('https://tb.53kf.com/code/client/69674485b84e5963e5158e9886d1df851/1');
+		}
+		
+// 			setInterval(checkStatus,600000);
+//         	function  checkStatus(){
+//         			$.post('https://www.aierxin.cn/CheckAccount/getAccountStatus.html','',function(res){
+//         				if(res.code==false){
+//         					message(220,res.message);
+//         					setInterval(function() {
+//         							window.location.href='https://www.aierxin.cn/login/index.html';	
+//         					},4000);
+//         				}
+//         			})
+// 		     }
+	</script>
+	<script type="text/javascript">
+		function down(res) {
+			$.post('https://www.aierxin.cn/Personalcenter/down.html', {
+				down_url: res
+			}, function(result) {
+				console.log(result);
+			});
+		}
+		// 窗口大小检测
+// 		window.setInterval(setSize, 1000);
+		function setSize() {
+			var height = $(window).height();
+			var width = $(window).width();
+
+			// $("span.ccH5sp").css('display','none'); //隐藏倍速按钮
+			$(".videos").css({ "width": width, "height": height - 60 });
+			$(".video-title").css({ "width": width});
+			$(".my-container").css({ "width": width - 100 });
+			$(".video-list").css({ "width": 360, "height": height -140 });
+			$("#video").css({ "width": width - 360 - 130, "height": height - 80 - 70 });
+			$(".video").css({ "width": width - 360 - 130, "height": height - 80 - 70 });
+			if (width < 1000) {
+				$(".video .video-list").css('display', 'none');
+				$("#video").css({ "width": width - 130 });
+			} else {
+				$(".video .video-list").css('display', 'block');
+			}
+		}
+	</script>
+</html>

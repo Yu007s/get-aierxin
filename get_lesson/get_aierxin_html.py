@@ -5,6 +5,8 @@ import re
 url_set = ["https://www.aierxin.cn/personalcenter/play.html?class_id=1734&type=0"
     , "https://www.aierxin.cn/personalcenter/play.html?class_id=1963&type=1"
     , "https://www.aierxin.cn/personalcenter/play.html?class_id=1731&type=1"
+        , "https://www.aierxin.cn/personalcenter/play.html?class_id=1961&type=1"
+           , "https://www.aierxin.cn/personalcenter/play.html?class_id=1730&type=1"
            ]
 
 headers = {
