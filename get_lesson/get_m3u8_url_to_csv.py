@@ -70,7 +70,10 @@ with open(output_csv, "w", newline="", encoding="utf-8-sig") as csvfile:
                     for copy in data.get("copies", []):
                         desp = copy.get("desp", "")
                         playurl = copy.get("playurl", "")
-                        file_label = f"{f_name}_{desp}"
+                        # 去掉 .html 后缀
+                        base_name = os.path.splitext(f_name)[0]
+
+                        file_label = f"{base_name}_{desp}"
                         writer.writerow([file_label, playurl])
                 else:
                     print(f"{f_name} -> 未匹配到 JSON 数据")

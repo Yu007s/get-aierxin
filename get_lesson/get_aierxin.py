@@ -1,31 +1,42 @@
 import subprocess
 import sys
 import shutil
+import csv
+import os
 
-# m3u8 视频地址（你提供的链接）
-m3u8_url = "https://cd12-ccd1-3.play.bokecc.com/flvs/606E693D99DE632E/2025-08-24/0E0E640BDE28CE94F3342D97BB1D6DF8-20.m3u8?t=1756265297&key=2DBA67911AB0A131D67A9F7835EB2180&tpl=10&tpt=112&custom_id=app_pc_12069879271"
+# CSV 文件路径
+csv_file = "/Users/devjys/Desktop/WorkSpaces/get-aierxin/get_lesson/视频下载地址1.csv"
 
-# 输出文件名
-output_file = "output.mp4"
+# 下载保存目录
+download_dir = "./videos"
+os.makedirs(download_dir, exist_ok=True)
 
 # 检查 ffmpeg 是否安装
 if not shutil.which("ffmpeg"):
     print("❌ 请先安装 ffmpeg 再运行此脚本")
     sys.exit(1)
 
-# 调用 ffmpeg 下载并合并视频
-cmd = [
-    "ffmpeg",
-    "-i", m3u8_url,   # 输入 m3u8 地址
-    "-c", "copy",     # 不转码，直接拷贝
-    "-bsf:a", "aac_adtstoasc",  # 处理音频头，避免部分播放器不兼容
-    output_file
-]
+# 读取 CSV 文件并下载
+with open(csv_file, newline='', encoding='utf-8') as f:
+    reader = csv.reader(f)
+    for row in reader:
+        if len(row) < 2:
+            continue  # 如果格式不对，跳过
+        filename, m3u8_url = row
+        # 去掉 HTML 后缀，避免文件名问题
+        filename = filename.replace(".html_高清", "").replace(".html_清晰", "") + ".mp4"
+        output_path = os.path.join(download_dir, filename)
 
-print("开始下载视频，请稍等...")
-result = subprocess.run(cmd)
-
-if result.returncode == 0:
-    print(f"✅ 下载完成，保存为 {output_file}")
-else:
-    print("❌ 下载失败，请检查链接是否过期或加密")
+        print(f"\n开始下载: {filename}")
+        cmd = [
+            "ffmpeg",
+            "-i", m3u8_url,
+            "-c", "copy",
+            "-bsf:a", "aac_adtstoasc",
+            output_path
+        ]
+        result = subprocess.run(cmd)
+        if result.returncode == 0:
+            print(f"✅ 下载完成: {output_path}")
+        else:
+            print(f"❌ 下载失败: {filename}")
